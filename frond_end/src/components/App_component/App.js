@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./App.css";
 import logo from '../../logo.svg';
 
@@ -50,7 +50,7 @@ class App extends Component {
             <input type="submit" value="Submit" />
           </form>
 
-          Vous n'avez pas de compte, Inscrivez vous ! <Link to="/01" style={{ color: 'blue' }} activeStyle={{ color: 'red' }}>Inscription</Link>
+          Vous n'avez pas de compte, Inscrivez vous ! <NavLink to="/01" style={{ color: 'blue' }} activeStyle={{ color: 'red' }}>Inscription</NavLink>
 
         </div>
       </div>
