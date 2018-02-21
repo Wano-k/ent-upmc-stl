@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="ENT-UPMC-STL" company="Universite Pierre et Marie Curie" webLink="http://" view-date="2018-02-04" view-index="0" gantt-divider-location="300" resource-divider-location="300" version="2.8.6" locale="en_US">
+    <description><![CDATA[Ent pour les étudiants de l'upmc de la formation Master 2 Science et Technologie des Logiciels en alternance]]></description>
+    <view zooming-state="default:5" id="gantt-chart">
+        <field id="tpd3" name="Name" width="163" order="0"/>
+        <field id="tpd4" name="Begin date" width="67" order="1"/>
+        <field id="tpd5" name="End date" width="66" order="2"/>
+        <option id="color.recent"><![CDATA[#33cc00 #99ff99 #ffff00 #ffcc66 #ffcc00 #ccff99 #ffff99 #cc0033 #ff3333 #ff0066]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="11" name="Semaine 1" color="#cccccc" meeting="false" start="2018-02-14" duration="5" complete="0" thirdDate="2018-02-14" thirdDate-constraint="0" expand="false">
+            <task id="13" name="Définition des technologies" color="#999999" meeting="false" start="2018-02-14" duration="1" complete="0" thirdDate="2018-02-14" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[Définitions des technologies utilisées pour le projet]]></notes>
+            </task>
+            <task id="14" name="Création du Dépot GitHub" color="#999999" meeting="false" start="2018-02-14" duration="1" complete="0" thirdDate="2018-02-14" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[Création du repository GitHub qui va contenir les différentes version de notre projet.]]></notes>
+            </task>
+            <task id="16" name="Répartition des tâches" color="#999999" meeting="false" start="2018-02-14" duration="1" complete="0" thirdDate="2018-02-14" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[Répartition des tâches à effectuer sur la semaine 1 pour chaque membre du groupe.]]></notes>
+            </task>
+            <task id="15" name="Créer la structure initiale du projet" color="#666666" meeting="false" start="2018-02-14" duration="5" complete="0" thirdDate="2018-02-14" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[Création d'un "Hello World" simple simulant un échange entre le serveur de l'application et la partie client. La structure est alors hébergé sur la plateforme d'hébergement.]]></notes>
+            </task>
+            <task id="19" name="Mise à jour du diagramme de classe" color="#666666" meeting="false" start="2018-02-14" duration="5" complete="0" thirdDate="2018-02-14" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[Mise à jour du diagramme de classe relative à la structure de la base de données créer pour la pré présentation. C'est diagramme répresentant la base de données utilisée pour l'application.]]></notes>
+            </task>
+        </task>
+        <task id="32" name="Semaine 2" color="#99ffff" meeting="false" start="2018-02-21" duration="5" complete="0" thirdDate="2018-02-05" thirdDate-constraint="0" expand="false">
+            <task id="35" name="Réunion d'équipe" color="#33ffff" meeting="false" start="2018-02-21" duration="1" complete="0" thirdDate="2018-02-21" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[Réunion hebdomadaire de l'équipe pour discuter de l'avancée du projet et prendre les décision de groupe pour les semaines à venir.]]></notes>
+            </task>
+            <task id="41" name="Création du diagramme de Gant" color="#33ffff" meeting="false" start="2018-02-21" duration="1" complete="0" thirdDate="2018-02-05" thirdDate-constraint="0" expand="true"/>
+            <task id="43" name="Chiffrage du planning prévisionnel" color="#33ffff" meeting="false" start="2018-02-21" duration="1" complete="0" thirdDate="2018-02-05" thirdDate-constraint="0" expand="true"/>
+            <task id="46" name="Terminer le Diagramme de classe" color="#33ccff" meeting="false" start="2018-02-21" duration="1" complete="0" thirdDate="2018-02-05" thirdDate-constraint="0" expand="true"/>
+            <task id="113" name="Création du ChatBot juste en Front-End" color="#009999" meeting="false" start="2018-02-21" duration="5" complete="0" thirdDate="2018-02-21" thirdDate-constraint="0" expand="true"/>
+            <task id="52" name="Création de l'interface de connexion" color="#009999" meeting="false" start="2018-02-21" duration="5" complete="0" thirdDate="2018-02-21" thirdDate-constraint="0" priority="2" expand="true">
+                <task id="57" name="Création du Front-End" color="#009999" meeting="false" start="2018-02-21" duration="5" complete="0" thirdDate="2018-02-21" thirdDate-constraint="0" expand="true"/>
+                <task id="61" name="Création du Back-End de l'interface de connexion" color="#009999" meeting="false" start="2018-02-21" duration="5" complete="0" thirdDate="2018-02-21" thirdDate-constraint="0" expand="true"/>
+                <task id="67" name="Création des tests de l'interface de connexion" color="#009999" meeting="false" start="2018-02-22" duration="4" complete="0" thirdDate="2018-02-21" thirdDate-constraint="0" expand="true"/>
+            </task>
+        </task>
+        <task id="70" name="Semaine 3" color="#9999ff" meeting="false" start="2018-02-28" duration="10" complete="0" thirdDate="2018-02-05" thirdDate-constraint="0" expand="false">
+            <task id="75" name="Réunion d'équipe" color="#6666ff" meeting="false" start="2018-02-28" duration="1" complete="0" thirdDate="2018-02-28" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[Réunion hebdomadaire de l'équipe pour discuter de l'avancée du projet et prendre les décision de groupe pour les semaines à venir.]]></notes>
+            </task>
+            <task id="78" name="Vérification des test de la connexion" color="#6666ff" meeting="false" start="2018-02-28" duration="1" complete="0" thirdDate="2018-02-05" thirdDate-constraint="0" expand="true"/>
+            <task id="81" name="Créer le système de gestion du calendrier" color="#0066cc" meeting="false" start="2018-02-28" duration="10" complete="0" thirdDate="2018-02-28" thirdDate-constraint="0" priority="2" expand="true">
+                <task id="85" name="Créer le Front-End dys sytème de gestion du calendrier" color="#0033ff" meeting="false" start="2018-02-28" duration="10" complete="0" thirdDate="2018-02-28" thirdDate-constraint="0" expand="true"/>
+                <task id="87" name="Créer le Back-End du système de gestion de Calendrier" color="#0033ff" meeting="false" start="2018-02-28" duration="10" complete="0" thirdDate="2018-02-28" thirdDate-constraint="0" expand="true"/>
+                <task id="93" name="Créer les tests liés au système de gestion du calendrier" color="#0033ff" meeting="false" start="2018-03-01" duration="4" complete="0" thirdDate="2018-03-01" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="96" name="Créer le système de gestion des cours" color="#0066cc" meeting="false" start="2018-02-28" duration="10" complete="0" thirdDate="2018-02-28" thirdDate-constraint="0" priority="2" expand="true">
+                <task id="98" name="Créer le Front-End dys sytème de gestion des cours" color="#0033ff" meeting="false" start="2018-02-28" duration="10" complete="0" thirdDate="2018-02-28" thirdDate-constraint="0" expand="true"/>
+                <task id="100" name="Créer le Back-End du système de gestion des cours" color="#0033ff" meeting="false" start="2018-02-28" duration="10" complete="0" thirdDate="2018-02-28" thirdDate-constraint="0" expand="true"/>
+                <task id="102" name="Créer les tests liés au système de gestion des cours" color="#0033ff" meeting="false" start="2018-03-01" duration="4" complete="0" thirdDate="2018-03-01" thirdDate-constraint="0" expand="true"/>
+            </task>
+        </task>
+        <task id="118" name="Semaine 4" color="#cc99ff" meeting="false" start="2018-03-07" duration="10" complete="0" thirdDate="2018-03-07" thirdDate-constraint="0" expand="false">
+            <task id="125" name="Réunion d'équipe" color="#cc66ff" meeting="false" start="2018-03-07" duration="1" complete="0" thirdDate="2018-03-07" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[Réunion hebdomadaire de l'équipe pour discuter de l'avancée du projet et prendre les décision de groupe pour les semaines à venir.]]></notes>
+            </task>
+            <task id="137" name="Vérification des test du système de gestion du calendrier" color="#cc66ff" meeting="false" start="2018-03-07" duration="1" complete="0" thirdDate="2018-03-07" thirdDate-constraint="0" expand="true"/>
+            <task id="162" name="Vérification des test du système de gestion des cours" color="#cc66ff" meeting="false" start="2018-03-07" duration="1" complete="0" thirdDate="2018-03-07" thirdDate-constraint="0" expand="true"/>
+            <task id="165" name="Créer le système de gestion des échéances et controles" color="#cc00ff" meeting="false" start="2018-03-07" duration="10" complete="0" thirdDate="2018-03-07" thirdDate-constraint="0" priority="2" expand="true">
+                <task id="167" name="Créer le Front-End dys sytème de gestion des échéances et controles" color="#990099" meeting="false" start="2018-03-07" duration="10" complete="0" thirdDate="2018-03-07" thirdDate-constraint="0" expand="true"/>
+                <task id="169" name="Créer le Back-End du système de gestion des échéances et controles" color="#990099" meeting="false" start="2018-03-07" duration="10" complete="0" thirdDate="2018-03-07" thirdDate-constraint="0" expand="true"/>
+                <task id="171" name="Créer les tests liés au système de gestion des échéances et controles" color="#990099" meeting="false" start="2018-03-08" duration="4" complete="0" thirdDate="2018-03-08" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="209" name="Créer le système de gestion des Fichiers et Stockages" color="#cc00ff" meeting="false" start="2018-03-07" duration="10" complete="0" thirdDate="2018-03-07" thirdDate-constraint="0" priority="2" expand="true">
+                <task id="211" name="Créer le Front-End dys sytème de gestion des Fichiers et Stockages" color="#990099" meeting="false" start="2018-03-07" duration="10" complete="0" thirdDate="2018-03-07" thirdDate-constraint="0" expand="true"/>
+                <task id="213" name="Créer le Back-End du système de gestion des Fichiers et Stockages" color="#990099" meeting="false" start="2018-03-07" duration="10" complete="0" thirdDate="2018-03-07" thirdDate-constraint="0" expand="true"/>
+                <task id="215" name="Créer les tests liés au système de gestion des Fichiers et Stockages" color="#990099" meeting="false" start="2018-03-08" duration="4" complete="0" thirdDate="2018-03-08" thirdDate-constraint="0" expand="true"/>
+            </task>
+        </task>
+        <task id="190" name="Semaine 5" color="#ff9999" meeting="false" start="2018-03-14" duration="10" complete="0" thirdDate="2018-03-07" thirdDate-constraint="0" expand="false">
+            <task id="192" name="Réunion d'équipe" color="#ff6666" meeting="false" start="2018-03-14" duration="1" complete="0" thirdDate="2018-03-07" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[Réunion hebdomadaire de l'équipe pour discuter de l'avancée du projet et prendre les décision de groupe pour les semaines à venir.]]></notes>
+            </task>
+            <task id="194" name="Vérification des test du système de gestion des échéances et controles" color="#ff6666" meeting="false" start="2018-03-14" duration="1" complete="0" thirdDate="2018-03-14" thirdDate-constraint="0" expand="true"/>
+            <task id="196" name="Vérification des test du système de gestion des fichiers et stockage" color="#ff6666" meeting="false" start="2018-03-14" duration="1" complete="0" thirdDate="2018-03-14" thirdDate-constraint="0" expand="true"/>
+            <task id="198" name="Créer le système de gestion des Entreprises" color="#ff3333" meeting="false" start="2018-03-14" duration="10" complete="0" thirdDate="2018-03-14" thirdDate-constraint="0" priority="2" expand="true">
+                <task id="200" name="Créer le Front-End dys sytème de gestion des Entreprises" color="#cc0033" meeting="false" start="2018-03-14" duration="10" complete="0" thirdDate="2018-03-14" thirdDate-constraint="0" expand="true"/>
+                <task id="202" name="Créer le Back-End du système de gestion des Entreprises" color="#cc0033" meeting="false" start="2018-03-14" duration="10" complete="0" thirdDate="2018-03-14" thirdDate-constraint="0" expand="true"/>
+                <task id="204" name="Créer les tests liés au système de gestion des échéances et controles" color="#cc0033" meeting="false" start="2018-03-15" duration="4" complete="0" thirdDate="2018-03-08" thirdDate-constraint="0" expand="true"/>
+            </task>
+        </task>
+        <task id="239" name="Semaine 6" color="#ffff99" meeting="false" start="2018-03-21" duration="10" complete="0" thirdDate="2018-03-14" thirdDate-constraint="0" expand="false">
+            <task id="241" name="Réunion d'équipe" color="#ffcc66" meeting="false" start="2018-03-21" duration="1" complete="0" thirdDate="2018-03-14" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[Réunion hebdomadaire de l'équipe pour discuter de l'avancée du projet et prendre les décision de groupe pour les semaines à venir.]]></notes>
+            </task>
+            <task id="243" name="Vérification des test du système de gestion des entreprises" color="#ffcc66" meeting="false" start="2018-03-21" duration="1" complete="0" thirdDate="2018-03-21" thirdDate-constraint="0" expand="true"/>
+            <task id="279" name="Rédaction du rapport technique" color="#ffff00" meeting="false" start="2018-03-21" duration="10" complete="0" thirdDate="2018-03-21" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="289" name="Rédaction du rapport fonctionnel de gestion de projet" color="#ffff00" meeting="false" start="2018-03-21" duration="10" complete="0" thirdDate="2018-03-21" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="247" name="Créer le forum" color="#ffcc00" meeting="false" start="2018-03-21" duration="10" complete="0" thirdDate="2018-03-21" thirdDate-constraint="0" priority="0" expand="true">
+                <task id="249" name="Créer le Front-End du forum" color="#ffff00" meeting="false" start="2018-03-21" duration="10" complete="0" thirdDate="2018-03-21" thirdDate-constraint="0" expand="true"/>
+                <task id="251" name="Créer le Back-End du système de gestion des Entreprises" color="#ffff00" meeting="false" start="2018-03-21" duration="10" complete="0" thirdDate="2018-03-21" thirdDate-constraint="0" expand="true"/>
+                <task id="253" name="Créer les tests liés au forum" color="#ffff00" meeting="false" start="2018-03-22" duration="4" complete="0" thirdDate="2018-03-22" thirdDate-constraint="0" expand="true"/>
+            </task>
+        </task>
+        <task id="294" name="Semaine 7" color="#99ff99" meeting="false" start="2018-04-04" duration="3" complete="0" thirdDate="2018-03-21" thirdDate-constraint="0" expand="false">
+            <task id="296" name="Réunion d'équipe" color="#33cc00" meeting="false" start="2018-04-04" duration="3" complete="0" thirdDate="2018-04-04" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[Réunion hebdomadaire de l'équipe pour discuter de l'avancée du projet et prendre les décision de groupe pour les semaines à venir.]]></notes>
+            </task>
+            <task id="298" name="Vérification des test du forum" color="#33cc00" meeting="false" start="2018-04-04" duration="3" complete="0" thirdDate="2018-04-04" thirdDate-constraint="0" priority="0" expand="true"/>
+            <task id="300" name="Création de la présentation technique" color="#33cc00" meeting="false" start="2018-04-04" duration="3" complete="0" thirdDate="2018-04-04" thirdDate-constraint="0" expand="true"/>
+            <task id="302" name="Création de la présentation fonctionnel de gestion de projet" color="#33cc00" meeting="false" start="2018-04-04" duration="3" complete="0" thirdDate="2018-04-04" thirdDate-constraint="0" expand="true"/>
+        </task>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>
