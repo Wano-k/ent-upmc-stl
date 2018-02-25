@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import "./App.css";
-import logo from '../../logo.svg';
 import ChatBot from 'react-simple-chatbot';
+import AppHeader from './AppHeader';
 
 import PropTypes from 'prop-types';
 
@@ -56,8 +56,6 @@ Review.defaultProps = {
   steps: undefined,
 };
 
-
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -84,10 +82,7 @@ class App extends Component {
     return (
 
       <div className="App">
-        <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Bienvenue sur la plateforme pédagogique des STL de l'Université Pierre et Marie Curie </h1>
-        </header>
+        <AppHeader />
         <p className="App-intro">
           Notre plateforme vous permettra d'accéder avec facilité à l'ensemble des supports de cours des UEs de la filière STL.
         </p>

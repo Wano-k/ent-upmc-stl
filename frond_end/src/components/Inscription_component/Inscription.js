@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../../logo.svg';
+import AppHeader from '../App_component/AppHeader';
 import './Inscription.css';
 
 class Inscription extends Component {
@@ -106,48 +106,51 @@ class Inscription extends Component {
     /*Le Rendu*/
     render() {
         return (
-            <div className="SignUpForm">
-              <h1>Inscription</h1>
-              <br />
-              <p class="ErrorMessage">{this.state.generalErrorMsg}</p>
-              <form onSubmit={this.handleSubmit}>
-                <label class="Insc-label" for="email">Adresse email:</label>
-                  <input
-                      id="email"
-                      type="text"
-                      value={this.state.email}
-                      onChange={this.handleEmailChange}
-                      placeholder="john.doe@etu.upmc.fr"
-                  />
-                  <label className="ErrorMessage">{this.state.emailErrorMsg}</label>
-                <br />
-                <br />
-                <label class="Insc-label" for="pass">Mot de passe:</label>
-                  <input
-                      id="pass"
-                      type="password"
-                      value={this.state.pass}
-                      onChange={this.handlePasswordChange}
-                      placeholder="mot de passe"
-                  />
-                  <label className="ErrorMessage">{this.state.passwordErrorMsg}</label>
-                <br />
-                <br />
-                <label class="Insc-label" for="confirm">Confirmer le mot de passe:</label>
-                  <input
-                      id="confirm"
-                      type="password"
-                      value={this.state.passConfirm}
-                      onChange={this.handleConfirmPasswordChange}
-                      placeholder="mot de passe"
-                  />
-                  <label className="ErrorMessage">{this.state.confirmPasswordErrorMsg}</label>
-                <br />
-                <br />
-                <button type="submit" className="wideButton">
-                  Valider
-                </button>
-              </form>
+            <div>
+                <AppHeader />
+                <div className="SignUpForm">
+                  <h1>Inscription</h1>
+                  <br />
+                  <p class="ErrorMessage">{this.state.generalErrorMsg}</p>
+                  <form onSubmit={this.handleSubmit}>
+                    <label class="Insc-label" for="email">Adresse email:</label>
+                      <input
+                          id="email"
+                          type="text"
+                          value={this.state.email}
+                          onChange={this.handleEmailChange}
+                          placeholder="john.doe@etu.upmc.fr"
+                      />
+                      <label className="ErrorMessage">{this.state.emailErrorMsg}</label>
+                    <br />
+                    <br />
+                    <label class="Insc-label" for="pass">Mot de passe:</label>
+                      <input
+                          id="pass"
+                          type="password"
+                          value={this.state.pass}
+                          onChange={this.handlePasswordChange}
+                          placeholder="mot de passe"
+                      />
+                      <label className="ErrorMessage">{this.state.passwordErrorMsg}</label>
+                    <br />
+                    <br />
+                    <label class="Insc-label" for="confirm">Confirmer le mot de passe:</label>
+                      <input
+                          id="confirm"
+                          type="password"
+                          value={this.state.passConfirm}
+                          onChange={this.handleConfirmPasswordChange}
+                          placeholder="mot de passe"
+                      />
+                      <label className="ErrorMessage">{this.state.confirmPasswordErrorMsg}</label>
+                    <br />
+                    <br />
+                    <button type="submit" className="wideButton">
+                      Valider
+                    </button>
+                  </form>
+                </div>
             </div>
         );
     }
