@@ -4,6 +4,8 @@ import "./App.css";
 import ChatBot from 'react-simple-chatbot';
 import AppHeader from './AppHeader';
 import logo from '../../logo.svg';
+import Calendar from '../Calendar_component/Calendar'
+
 import PropTypes from 'prop-types';
 
 class Review extends Component {
@@ -103,6 +105,14 @@ class App extends Component {
   }
 
   render() {
+    let events = [
+      {
+        title:"Glander",
+        start:'2018-02-25T09:00:00',
+        end: '2018-02-25T11:30:00',
+      },
+    ]
+
     return (
   <div className="App">
         <AppHeader/>
@@ -223,6 +233,7 @@ class App extends Component {
   />
         </div>
         </div>
+        <Calendar />
       </div>
 
     );
