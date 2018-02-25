@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./App.css";
 import ChatBot from 'react-simple-chatbot';
 import AppHeader from './AppHeader';
-
+import logo from '../../logo.svg';
 import PropTypes from 'prop-types';
 
 class Review extends Component {
@@ -59,49 +59,75 @@ Review.defaultProps = {
 class App extends Component {
   constructor(props) {
     super(props);
-    /*value correspondant au champs Identifiant*/
-    this.state = { value: '' };
-    /*A modifier: la var pour le mot de passe dans le this.state*/
-    this.state = { pass: '' };
+    /*ident correspondant au champs Identifiant*/
+    this.state = { ident: undefined };
+    /* mdp correspondant au champs Mot de passe*/
+    this.state = { mdp : undefined};
+    /* result correspondant à la réponse du serveur après validation*/
+    this.state = { result : undefined};
     /* actions */
-    this.handleChange = this.handleChange.bind(this);
+    this.handleChangeIdent = this.handleChangeIdent.bind(this);
+    this.handleChangePass = this.handleChangePass.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   /*action onChange pour le champs Identifiant */
-  handleChange(event) {
-    this.setState({ value: event.target.value });
+  handleChangeIdent(event) {
+    const v = (event.target.value)
+    this.setState({ ident: v});
+    
+    console.log('name =' + this.state.ident + ' value = ' + v);
+    console.log('Un identifiant = ' + this.state.ident);
+    console.log('Un mot de passe = ' + this.state.mdp);
+  }
+
+
+  /*action onChange pour le champs Mot de passe */
+  handleChangePass(event) {
+    const v = (event.target.value)
+    this.setState({ mdp: v});
+
+    console.log('name =' + this.state.mdp + ' value = ' + v);
+    console.log('Un identifiant = ' + this.state.ident);
+    console.log('Un mot de passe = ' + this.state.mdp);
   }
 
   /*action onSubmit pour le bouton Submit */
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
+    alert('Un identifiant = ' + this.state.ident+ " " + 'Un mot de passe = ' + this.state.mdp);
+    var obj = '{'
+       +'"id" :' +  this.state.ident 
+       +'"mdp"  :' + this.state.mdp
+       +'}';
+       /*envoie au serveur*/
     event.preventDefault();
   }
 
   render() {
     return (
-
-      <div className="App">
-        <AppHeader />
+  <div className="App">
+        <AppHeader/>
         <p className="App-intro">
           Notre plateforme vous permettra d'accéder avec facilité à l'ensemble des supports de cours des UEs de la filière STL.
         </p>
-        <div>
-          <form onSubmit={this.handleSubmit}>
-            <label>
-              Identifiant:
-     <input type="text" value={this.state.value} onChange={this.handleChange} />
-            </label>
-            <br />
-            <label>
-              Mot de passe:
-     <input type="password" value={this.state.pass} />
-            </label>
-            <input type="submit" value="Submit" />
-          </form>
 
-          Vous n'avez pas de compte, Inscrivez vous ! <NavLink to="/01" style={{ color: 'blue' }} activeStyle={{ color: 'red' }}>Inscription</NavLink>
-        
+        <div class="container">
+          <div class="jumbotron" id="jumbotron">
+            <form onSubmit={this.handleSubmit}>
+              <label>
+                Identifiant:
+                <input type="text" value={this.state.ident} onChange={this.handleChangeIdent} />
+              </label>
+              <br />
+              <label>
+                Mot de passe:
+                <input type="password" value={this.state.mdp} onChange={this.handleChangePass}/>
+              </label>
+                <input type="submit" value="Submit"/>
+            </form>
+
+            Vous n'avez pas de compte, Inscrivez vous ! 
+            <NavLink to="/01" style={{ color: 'blue' }} activeStyle={{ color: 'red' }}>Inscription</NavLink>        
+       
         <ChatBot
         
           floating={true}
@@ -183,6 +209,7 @@ class App extends Component {
          
           ]}
   />
+        </div>
         </div>
       </div>
 
