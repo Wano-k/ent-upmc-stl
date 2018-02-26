@@ -18,3 +18,21 @@ routes(app); //register the route
 app.listen(port);
 
 console.log('todo list RESTful API server started on: ' + port);
+
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "ent_upmc",
+  password: "1234",
+  database: "ent"
+});
+
+
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+});
+
+global.db = con;
