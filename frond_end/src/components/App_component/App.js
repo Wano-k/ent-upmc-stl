@@ -105,14 +105,6 @@ class App extends Component {
   }
 
   render() {
-    let events = [
-      {
-        title:"Glander",
-        start:'2018-02-25T09:00:00',
-        end: '2018-02-25T11:30:00',
-      },
-    ]
-
     return (
   <div className="App">
         <AppHeader/>
