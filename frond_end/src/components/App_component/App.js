@@ -110,24 +110,39 @@ class App extends Component {
           Notre plateforme vous permettra d'accéder avec facilité à l'ensemble des supports de cours des UEs de la filière STL.
         </p>
 
+
+        <link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+        <link rel="stylesheet" type="text/css"
+		href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+
+
+
+
         <div class="container">
           <div class="jumbotron" id="jumbotron">
-            <form onSubmit={this.handleSubmit}>
-              <label>
-                Identifiant:
-                <input type="text" value={this.state.ident} onChange={this.handleChangeIdent} />
-              </label>
-              <br />
-              <label>
-                Mot de passe:
-                <input type="password" value={this.state.mdp} onChange={this.handleChangePass}/>
-              </label>
-                <input type="submit" value="Submit"/>
-            </form>
-
-            Vous n'avez pas de compte, Inscrivez vous ! 
-            <NavLink to="/01" style={{ color: 'blue' }} activeStyle={{ color: 'red' }}>Inscription</NavLink>        
-       
+         <form class='form-signin' onSubmit={this.handleSubmit} >
+				<h2 class="form-signin-heading">Login</h2>
+				<input type='text' class='form-control' name='name' id='username'
+					placeholder='Login' required='' autofocus=''  value={this.state.ident} onChange={this.handleChangeIdent} />
+					
+					<input
+					type='password' class='form-control' name='name2' id='password'
+					placeholder='Password' required=''value={this.state.mdp} onChange={this.handleChangePass} />
+				<button class='btn btn-lg btn-primary btn-block' id='button'  type="submit" value="Submit" >Login</button>
+			</form>
+			 Vous n'avez pas de compte, Inscrivez vous ! 
+            <NavLink to="/01" style={{ color: 'blue' }} activeStyle={{ color: 'red' }}>Inscription</NavLink>   
+          
+          
+          
+          
+          
         <ChatBot
         
           floating={true}
@@ -203,10 +218,7 @@ class App extends Component {
                   asMessage: true,
                 trigger : 'fin',
             },
-            
-          
-            
-         
+           
           ]}
   />
         </div>
