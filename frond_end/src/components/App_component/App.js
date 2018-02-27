@@ -111,21 +111,6 @@ class App extends Component {
         <p className="App-intro">
           Notre plateforme vous permettra d'accéder avec facilité à l'ensemble des supports de cours des UEs de la filière STL.
         </p>
-
-
-        <link rel="stylesheet"
-		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	
-        <link rel="stylesheet" type="text/css"
-		href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
-
-
-
-
         <div class="container">
           <div class="jumbotron" id="jumbotron">
          <form class='form-signin' onSubmit={this.handleSubmit} >
@@ -139,9 +124,7 @@ class App extends Component {
 				<button class='btn btn-lg btn-primary btn-block' id='button'  type="submit" value="Submit" >Login</button>
 			</form>
 			 Vous n'avez pas de compte, Inscrivez vous ! 
-            <NavLink to="/01" style={{ color: 'blue' }} activeStyle={{ color: 'red' }}>Inscription</NavLink>   
-          
-          
+            <NavLink to="/inscription" style={{ color: 'blue' }} activeStyle={{ color: 'red' }}>Inscription</NavLink>   
           
           
           
@@ -224,9 +207,10 @@ class App extends Component {
           ]}
   />
         </div>
-        </div>
-        <Calendar />
-      </div>
+      </div> 
+      Souhaitez vous consulter le calendrier des M2 STL INSTA ? Cliquez
+            <NavLink to="/calendrier" style={{ color: 'blue' }} activeStyle={{ color: 'red' }}> ici</NavLink>   
+    </div>
 
     );
   }
