@@ -1,6 +1,9 @@
+'use strict';
+
 var crypto = require('crypto');
 var randomstring = require("randomstring");
 var nodemailer = require('nodemailer');
+var jwt = require('jsonwebtoken');
 
 var transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -40,19 +43,13 @@ exports.signup=function(req , res){
          return;
     }
     var activation= randomstring.generate(15);
-    var mailOptions = {
-        from: 'mail-noreply@ent_upmc.com', // sender address
-        to: email, // list of receivers
-        subject: 'Activation du compte', // Subject line
-        html: '<p>'+activation+'</p>'// plain text body
-    };
     var users={
-        "prenom":db.escape(fname),
-        "nom":db.escape(lname),
-        "mail":db.escape(email),
-        "motDePasse":db.escape(encrypted_pass),
-        "role":db.escape(role),
-        "codeActiv":db.escape(activation)
+        "prenom":fname,
+        "nom":lname,
+        "mail":email,
+        "motDePasse":encrypted_pass,
+        "role":role,
+        "codeActiv":activation
       }
    // var sql = "INSERT INTO `login`(`id`,`prenom`,`nom`,`motDePasse`,`mail`,`role`,`codeActiv`) VALUES ('','" + db.escape(fname) + "','" +  db.escape(lname) + "','" + db.escape(encrypted_pass)+ "','" + db.escape(email)+ "','"+ db.escape(role)+ "','" +db.escape(activation)+"')";
     var query = db.query('INSERT INTO Utilisateur SET ?',users, function (error, results, fields) {
@@ -61,8 +58,14 @@ exports.signup=function(req , res){
           res.send({
             "code":400,
             "failed":"error ocurred"
-          })
+          });
         }else{
+            var mailOptions = {
+                from: 'mail-noreply@ent_upmc.com', // sender address
+                to: email, // list of receivers
+                subject: 'Activation du compte', // Subject line
+                html: '<a href="http://localhost:8080/activ/'+results.insertId+'/'+activation+'">Activer mon compte</a>'// plain text body
+            };
             transporter.sendMail(mailOptions, function (err, info) {
                 if(err)
                   console.log(err)
@@ -78,3 +81,46 @@ exports.signup=function(req , res){
     });
      
 };
+
+exports.activation = function(req, res) {
+    console.log("Code: "+req.params.code);
+    db.query('UPDATE Utilisateur SET codeActiv = "" WHERE idUtilisateur = ? AND codeActiv=?', [parseInt(req.params.userId),""+req.params.code], function(err, result){
+        if (err || result.changedRows ==0) {
+            //console.log("error ocurred",err);
+            res.send({
+              "code":400,
+              "failed":"Erreur"
+            });
+           // res.redirect("https://www.w3schools.com/jsref/jsref_parseint.asp");
+          }else{
+            console.log('Record Updated ' + result.changedRows + ' rows');
+            res.send({
+                "code":200,
+                "success":"compte correctement activé"
+            });
+           // res.redirect("https://tecadmin.net/node-with-mysql-examples/#");
+          }  
+      });
+  };
+
+  exports.login = function(req, res) {
+    var mail = req.body.email;
+    //var decoded = jwt.verify("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiZXR1IiwiZW1haWwiOiJyaWNoYXJkLmJ1bmVsQGV0dS51cG1jLmZyIiwiaWF0IjoxNTE5NzQxNDE1fQ.Y80gRot1gxkkr2dEkBBy3PsJviaDqzCaLnG1IHRR-cU", 'keyentupmcjwt');
+    //console.log("Token décodé:"+decoded.role+" "+decoded.email);
+    var mdp =  crypto.createHash('sha256').update(req.body.password).digest('base64');
+    db.query('SELECT * FROM Utilisateur WHERE mail = ? AND motDePasse = ? AND codeActiv = ""', [mail,mdp] ,function(error, result, fields){
+        console.log(result.length);
+        if (error || result.length==0) {
+            res.send({
+              "code":400,
+              "failed":"Compte non activé ou inexistant"
+            });
+          }else{
+            var token = jwt.sign({ role: result[0].role,email:result[0].mail }, 'keyentupmcjwt');
+            res.send({
+                "code":200,
+                "token":token
+            });
+          }  
+    });    
+  };

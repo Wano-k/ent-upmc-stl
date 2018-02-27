@@ -8,4 +8,8 @@ module.exports = function(app) {
 
   app.post('/signup', user.signup);  
 
+  app.get('/activ/:userId/:code', user.activation);  
+
+  app.post('/login', user.login);  
+
 };
