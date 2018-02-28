@@ -33,7 +33,7 @@ exports.signup=function(req , res){
     if(role != null && role==="etu"){
         var arrayOfStrings = email.split("@");
         fname = arrayOfStrings[0].split(".")[0];
-        lname = arrayOfStrings[0].split(".")[1];
+        lname = arrayOfStrings[0].split(".")[1].replace(/\d+$/,"");
     }
     else if(role==null){
         res.send({
